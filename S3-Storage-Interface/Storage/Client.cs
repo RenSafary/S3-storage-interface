@@ -12,50 +12,32 @@ namespace S3_Storage_Interface.Storage
 {
     internal class Client
     {
-        private readonly IAmazonS3 s3Client;
-        public Client(string accessKey, string secretKey, string endpoint)
+        public string bucketName;
+        public string access_key;
+        public string secret_key;
+        public string endpoint;
+        public string keyName;
+        public string filePath;
+
+        public AmazonS3Client s3Client;
+        
+        public Client(string bucketName, string access_key, string secret_key, string endpoint, string keyName, string filePath)
         {
+            this.bucketName = bucketName;
+            this.access_key = access_key; 
+            this.secret_key = secret_key; 
+            this.endpoint = endpoint;
+            this.keyName = keyName;
+            this.filePath = filePath;
+
             var config = new AmazonS3Config
             {
                 ServiceURL = endpoint,
-                ForcePathStyle = true
+                ForcePathStyle = true,
             };
-            s3Client = new AmazonS3Client(accessKey, secretKey, config);
-        }
-        public List<S3Object> ListObjects(string bucketName)
-        {
-            try
-            {
-                var request = new ListObjectsV2Request
-                {
-                    BucketName = "Photo-Storage",
-                    MaxKeys = 1000
-                };
 
-                var response = s3Client.ListObjectsV2(request);
-                return response.S3Objects;
-            }
-            catch (AmazonS3Exception ex)
-            {
-                Console.WriteLine($"S3 Error: {ex.Message}");
-                return new List<S3Object>();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-                return new List<S3Object>();
-            }
-        }
+            s3Client = new AmazonS3Client(access_key, secret_key, config);
 
-        // Пример использования
-        public void PrintObjects(string bucketName)
-        {
-            var objects = ListObjects(bucketName);
-            Console.WriteLine($"Objects in bucket '{bucketName}':");
-            foreach (var obj in objects)
-            {
-                Console.WriteLine($"- {obj.Key} (Size: {obj.Size} bytes, Last Modified: {obj.LastModified})");
-            }
         }
     }
 }

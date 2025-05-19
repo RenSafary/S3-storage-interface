@@ -31,12 +31,14 @@ namespace S3_Storage_Interface
         {
             using (StreamReader sr = new StreamReader("params.txt"))
             {
+                string bucketName = sr.ReadLine();
                 string endpoint = sr.ReadLine();
-                string Region_Name = sr.ReadLine();
                 string accessKey = sr.ReadLine();
                 string secretKey = sr.ReadLine();
+                //string keyName = sr.ReadLine(); in another place
+                //string filePath = sr.ReadLine(); in another place
 
-                Client s3Client = new Client(accessKey, secretKey, endpoint);
+                Client s3Client = new Client(bucketName, accessKey, secretKey, endpoint, keyName, filePath);
             }
         }
         private void Button_Click(object sender, RoutedEventArgs e)
