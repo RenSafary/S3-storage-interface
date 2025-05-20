@@ -16,19 +16,15 @@ namespace S3_Storage_Interface.Storage
         public string access_key;
         public string secret_key;
         public string endpoint;
-        public string keyName;
-        public string filePath;
 
         public AmazonS3Client s3Client;
         
-        public Client(string bucketName, string access_key, string secret_key, string endpoint, string keyName, string filePath)
+        public Client(string bucketName, string access_key, string secret_key, string endpoint)
         {
-            this.bucketName = bucketName;
-            this.access_key = access_key; 
-            this.secret_key = secret_key; 
             this.endpoint = endpoint;
-            this.keyName = keyName;
-            this.filePath = filePath;
+            this.access_key = access_key;
+            this.secret_key = secret_key;
+            this.bucketName = bucketName;
 
             var config = new AmazonS3Config
             {
