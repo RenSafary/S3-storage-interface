@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Settings" Margin="0,372,724,0" Click="Button_Click"/>
+        <Button Content="Settings" Margin="0,372,724,0" Click="Button_Settings"/>
+        <Button Content="Upload &#xD;&#xA;Files" Margin="76,372,648,0" Click="Button_Upload"/>
     </Grid>
 </Window>
