@@ -28,7 +28,6 @@ namespace S3_Storage_Interface
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (Endpoint_URL.Text == "" ||
-                Region_Name.Text == "" ||
                 Access_Key_Id.Text == "" ||
                 Secret_Access_Key.Text == "" ||
                 Bucket_Name.Text == "")
@@ -40,7 +39,6 @@ namespace S3_Storage_Interface
                 using (StreamWriter sw = new StreamWriter("params_s3.txt"))
                 {
                     sw.WriteLine(Endpoint_URL.Text);
-                    sw.WriteLine(Region_Name.Text);
                     sw.WriteLine(Access_Key_Id.Text);
                     sw.WriteLine(Secret_Access_Key.Text);
                     sw.WriteLine(Bucket_Name.Text);
