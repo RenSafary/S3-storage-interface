@@ -11,7 +11,8 @@
         <Button Content="Upload &#xD;&#xA;Files" Margin="76,372,648,0" Click="Button_Upload"/>
         <ListBox x:Name="ListAllObjs" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="145,80,170,135" SelectionChanged="ListBox_SelectionChanged">
         </ListBox>
-        <Button x:Name="Refresh" Content="Refresh" Margin="458,304,237,73" Click="Button_Refresh"/>
-        <Button x:Name="Delete_Obj" Content="Delete" HorizontalAlignment="Left" Margin="268,304,0,0" VerticalAlignment="Top" Height="57" Width="99" Click="Delete_Obj_Click"/>
+        <Button x:Name="Refresh" Content="Refresh" Margin="340,304,366,101" Click="Button_Refresh"/>
+        <Button x:Name="Delete_Obj" Content="Delete" HorizontalAlignment="Left" Margin="202,304,0,0" VerticalAlignment="Top" Height="29" Width="86" Click="Delete_Obj_Click"/>
+        <Button x:Name="Download_Obj" Content="Download" HorizontalAlignment="Left" Margin="508,304,0,0" VerticalAlignment="Top" Height="29" Width="92" Click="Download_Obj_Click"/>
     </Grid>
 </Window>
