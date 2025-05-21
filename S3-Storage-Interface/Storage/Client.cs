@@ -33,7 +33,6 @@ namespace S3_Storage_Interface.Storage
             };
 
             s3Client = new AmazonS3Client(access_key, secret_key, config);
-
         }
     }
 }
