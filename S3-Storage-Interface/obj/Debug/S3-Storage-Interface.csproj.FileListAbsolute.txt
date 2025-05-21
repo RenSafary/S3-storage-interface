@@ -82,3 +82,7 @@ C:\Users\Домашний\Desktop\Git\S3-storage-interface\S3-Storage-Interface\
 C:\Users\Домашний\Desktop\Git\S3-storage-interface\S3-Storage-Interface\obj\Debug\S3-Stora.B604C15C.Up2Date
 C:\Users\Домашний\Desktop\Git\S3-storage-interface\S3-Storage-Interface\obj\Debug\S3-Storage-Interface.exe
 C:\Users\Домашний\Desktop\Git\S3-storage-interface\S3-Storage-Interface\obj\Debug\S3-Storage-Interface.pdb
+C:\Users\Домашний\Desktop\Git\S3-storage-interface\S3-Storage-Interface\bin\Debug\System.Reactive.dll
+C:\Users\Домашний\Desktop\Git\S3-storage-interface\S3-Storage-Interface\bin\Debug\System.Reactive.Windows.Forms.dll
+C:\Users\Домашний\Desktop\Git\S3-storage-interface\S3-Storage-Interface\bin\Debug\System.Reactive.xml
+C:\Users\Домашний\Desktop\Git\S3-storage-interface\S3-Storage-Interface\bin\Debug\System.Reactive.Windows.Forms.xml

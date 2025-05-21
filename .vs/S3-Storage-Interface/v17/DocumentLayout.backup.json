@@ -11,12 +11,12 @@
       "RelativeMoniker": "D:0:0:{E9832993-56B7-4111-8E7E-BDFA4EA7991E}|S3-Storage-Interface\\S3-Storage-Interface.csproj|solutionrelative:s3-storage-interface\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9832993-56B7-4111-8E7E-BDFA4EA7991E}|S3-Storage-Interface\\S3-Storage-Interface.csproj|c:\\users\\\u0434\u043E\u043C\u0430\u0448\u043D\u0438\u0439\\desktop\\git\\s3-storage-interface\\s3-storage-interface\\storage\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9832993-56B7-4111-8E7E-BDFA4EA7991E}|S3-Storage-Interface\\S3-Storage-Interface.csproj|solutionrelative:s3-storage-interface\\storage\\delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9832993-56B7-4111-8E7E-BDFA4EA7991E}|S3-Storage-Interface\\S3-Storage-Interface.csproj|c:\\users\\\u0434\u043E\u043C\u0430\u0448\u043D\u0438\u0439\\desktop\\git\\s3-storage-interface\\s3-storage-interface\\settingswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9832993-56B7-4111-8E7E-BDFA4EA7991E}|S3-Storage-Interface\\S3-Storage-Interface.csproj|solutionrelative:s3-storage-interface\\settingswindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E9832993-56B7-4111-8E7E-BDFA4EA7991E}|S3-Storage-Interface\\S3-Storage-Interface.csproj|C:\\Users\\\u0414\u043E\u043C\u0430\u0448\u043D\u0438\u0439\\Desktop\\Git\\S3-storage-interface\\s3-storage-interface\\storage\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E9832993-56B7-4111-8E7E-BDFA4EA7991E}|S3-Storage-Interface\\S3-Storage-Interface.csproj|solutionrelative:s3-storage-interface\\storage\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E9832993-56B7-4111-8E7E-BDFA4EA7991E}|S3-Storage-Interface\\S3-Storage-Interface.csproj|c:\\users\\\u0434\u043E\u043C\u0430\u0448\u043D\u0438\u0439\\desktop\\git\\s3-storage-interface\\s3-storage-interface\\storage\\upload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9832993-56B7-4111-8E7E-BDFA4EA7991E}|S3-Storage-Interface\\S3-Storage-Interface.csproj|solutionrelative:s3-storage-interface\\storage\\upload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,32 +26,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Delete.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043E\u043C\u0430\u0448\u043D\u0438\u0439\\Desktop\\Git\\S3-storage-interface\\S3-Storage-Interface\\Storage\\Delete.cs",
-              "RelativeDocumentMoniker": "S3-Storage-Interface\\Storage\\Delete.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043E\u043C\u0430\u0448\u043D\u0438\u0439\\Desktop\\Git\\S3-storage-interface\\S3-Storage-Interface\\Storage\\Delete.cs",
-              "RelativeToolTip": "S3-Storage-Interface\\Storage\\Delete.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAowBIAAAAlAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043E\u043C\u0430\u0448\u043D\u0438\u0439\\Desktop\\Git\\S3-storage-interface\\S3-Storage-Interface\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "S3-Storage-Interface\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043E\u043C\u0430\u0448\u043D\u0438\u0439\\Desktop\\Git\\S3-storage-interface\\S3-Storage-Interface\\MainWindow.xaml.cs*",
+              "RelativeToolTip": "S3-Storage-Interface\\MainWindow.xaml.cs*",
+              "ViewState": "AgIAACEAAAAAAAAAAAAUwC8AAABqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T09:43:19.406Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Client.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043E\u043C\u0430\u0448\u043D\u0438\u0439\\Desktop\\Git\\S3-storage-interface\\S3-Storage-Interface\\Storage\\Client.cs",
-              "RelativeDocumentMoniker": "S3-Storage-Interface\\Storage\\Client.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043E\u043C\u0430\u0448\u043D\u0438\u0439\\Desktop\\Git\\S3-storage-interface\\S3-Storage-Interface\\Storage\\Client.cs",
-              "RelativeToolTip": "S3-Storage-Interface\\Storage\\Client.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T07:56:56.04Z",
+              "WhenOpened": "2025-05-20T08:52:34.248Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -64,19 +52,33 @@
               "RelativeToolTip": "S3-Storage-Interface\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-05-20T12:00:17.466Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\u0414\u043E\u043C\u0430\u0448\u043D\u0438\u0439\\Desktop\\Git\\S3-storage-interface\\S3-Storage-Interface\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "S3-Storage-Interface\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\\u0414\u043E\u043C\u0430\u0448\u043D\u0438\u0439\\Desktop\\Git\\S3-storage-interface\\S3-Storage-Interface\\MainWindow.xaml.cs",
-              "RelativeToolTip": "S3-Storage-Interface\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAlwHIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "SettingsWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043E\u043C\u0430\u0448\u043D\u0438\u0439\\Desktop\\Git\\S3-storage-interface\\S3-Storage-Interface\\SettingsWindow.xaml.cs",
+              "RelativeDocumentMoniker": "S3-Storage-Interface\\SettingsWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043E\u043C\u0430\u0448\u043D\u0438\u0439\\Desktop\\Git\\S3-storage-interface\\S3-Storage-Interface\\SettingsWindow.xaml.cs",
+              "RelativeToolTip": "S3-Storage-Interface\\SettingsWindow.xaml.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T08:52:34.248Z",
+              "WhenOpened": "2025-05-21T11:29:09.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Upload.cs",
+              "DocumentMoniker": "C:\\Users\\\u0414\u043E\u043C\u0430\u0448\u043D\u0438\u0439\\Desktop\\Git\\S3-storage-interface\\S3-Storage-Interface\\Storage\\Upload.cs",
+              "RelativeDocumentMoniker": "S3-Storage-Interface\\Storage\\Upload.cs",
+              "ToolTip": "C:\\Users\\\u0414\u043E\u043C\u0430\u0448\u043D\u0438\u0439\\Desktop\\Git\\S3-storage-interface\\S3-Storage-Interface\\Storage\\Upload.cs",
+              "RelativeToolTip": "S3-Storage-Interface\\Storage\\Upload.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwDkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T11:20:49.576Z",
               "EditorCaption": ""
             }
           ]
