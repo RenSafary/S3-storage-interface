@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Forms;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -30,6 +31,8 @@ namespace S3_Storage_Interface
 
         private void Button_Settings(object sender, RoutedEventArgs e)
         {
+            Documents_Folder();
+
             SettingsWindow settingsWindow = new SettingsWindow();
             settingsWindow.Show();
         }
@@ -47,7 +50,7 @@ namespace S3_Storage_Interface
                 List<string> Params = GetParams();
 
                 Client client = new Client(Params[3], Params[1], Params[2], Params[0]);
-                AddToBucket addToBucket = new AddToBucket(client);
+                Upload addToBucket = new Upload(client);
 
                 bool response = addToBucket.AddFile(fileNames, filePaths);
             }
@@ -113,6 +116,32 @@ namespace S3_Storage_Interface
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void Download_Obj_Click(object sender, RoutedEventArgs e)
+        {
+            string selected_obj = ListAllObjs.SelectedItem.ToString();
+            if (selected_obj != null)
+            {
+                List<string> Params = GetParams();
+                Client client = new Client(Params[3], Params[1], Params[2], Params[0]);
+                Download download = new Download(client);
+                download.DownloadFile(selected_obj);
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("Select object", "Warning");
+            }
+        }
+        public void Documents_Folder()
+        {
+            string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string newFolderPath = System.IO.Path.Combine(documentsPath, "s3_bucket_files");
+
+            if (!Directory.Exists(newFolderPath))
+            {
+                Directory.CreateDirectory(newFolderPath);
+            }
         }
     }
 }
