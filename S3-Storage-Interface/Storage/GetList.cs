@@ -6,7 +6,7 @@ using System.IO;
 
 namespace S3_Storage_Interface.Storage
 {
-    internal class GetList
+    class GetList
     {
         public Client _client;
         public GetList(Client client)
