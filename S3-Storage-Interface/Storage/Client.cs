@@ -10,7 +10,7 @@ using System.IO;
 
 namespace S3_Storage_Interface.Storage
 {
-    internal class Client
+    public class Client
     {
         public string bucketName;
         public string access_key;
