@@ -9,5 +9,6 @@
     <Grid>
         <Button Content="Settings" Margin="0,372,724,0" Click="Button_Settings"/>
         <Button Content="Upload &#xD;&#xA;Files" Margin="76,372,648,0" Click="Button_Upload"/>
+        <ListBox x:Name="ListAllObjs" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,-2,10,67" SelectionChanged="ListBox_SelectionChanged"/>
     </Grid>
 </Window>
