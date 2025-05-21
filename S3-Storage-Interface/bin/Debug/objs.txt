@@ -1,4 +1,3 @@
-1.txt
 123/68.png
 123/69.png
 123/kek1
@@ -6,7 +5,6 @@ cool/kek/anders-jilden-cYrMQA7a3Wc-unsplash.jpg
 cool/kek/dino-reichmuth-kk3W5-0b6e0-unsplash.jpg
 cool/kek/qingbao-meng-01_igFr7hd4-unsplash.jpg
 hello/hello1.txt
-hello1.txt
 hi/asd/56.png
 hi/hello/68.png
 hi/kek/64.png
@@ -23,4 +21,3 @@ hi/ыфаафы/65.png
 hi/ыфаафы/66.png
 hi/ыфаафы/68.png
 hi/ыфаафы/69.png
-p.txt

@@ -92,7 +92,9 @@
     <Compile Include="SettingsWindow.xaml.cs">
       <DependentUpon>SettingsWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Storage\AddToBucket.cs" />
     <Compile Include="Storage\Client.cs" />
+    <Compile Include="Storage\Delete.cs" />
     <Compile Include="Storage\GetList.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
