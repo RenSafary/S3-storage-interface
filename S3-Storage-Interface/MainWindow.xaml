@@ -5,14 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:S3_Storage_Interface"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Settings" Margin="0,372,724,0" Click="Button_Settings"/>
-        <Button Content="Upload &#xD;&#xA;Files" Margin="76,372,648,0" Click="Button_Upload"/>
+        <Button Content="Settings" Margin="0,372,724,0" Click="Button_Settings" FontSize="14"/>
+        <Button Content="Upload &#xD;&#xA;Files" Margin="76,372,648,0" Click="Button_Upload" FontSize="14"/>
         <ListBox x:Name="ListAllObjs" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="145,80,170,135" SelectionChanged="ListBox_SelectionChanged">
         </ListBox>
-        <Button x:Name="Refresh" Content="Refresh" Margin="340,304,366,101" Click="Button_Refresh"/>
-        <Button x:Name="Delete_Obj" Content="Delete" HorizontalAlignment="Left" Margin="202,304,0,0" VerticalAlignment="Top" Height="29" Width="86" Click="Delete_Obj_Click"/>
-        <Button x:Name="Download_Obj" Content="Download" HorizontalAlignment="Left" Margin="508,304,0,0" VerticalAlignment="Top" Height="29" Width="92" Click="Download_Obj_Click"/>
+        <Button x:Name="Delete_Obj" Content="Delete" HorizontalAlignment="Left" Margin="202,304,0,0" VerticalAlignment="Top" Height="29" Width="86" Click="Delete_Obj_Click" FontSize="14"/>
+        <Button x:Name="Download_Obj" Content="Download" HorizontalAlignment="Left" Margin="508,304,0,0" VerticalAlignment="Top" Height="29" Width="92" Click="Download_Obj_Click" FontSize="14"/>
+        <Button x:Name="Refresh" Content="Refresh" HorizontalAlignment="Left" Margin="360,304,0,0" VerticalAlignment="Top" Height="29" Width="72" Click="Refresh_Click" FontSize="14"/>
+        <TextBox x:Name="SET_KEY" HorizontalAlignment="Left" Margin="209,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="391" FontSize="14" TextChanged="SET_KEY_Text_Changed" UndoLimit="250"/>
+        <Label x:Name="SET_KEY_LABEL" Content="Set KEY:" HorizontalAlignment="Left" Margin="145,40,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Button Content="i" HorizontalAlignment="Left" Margin="145,304,0,0" VerticalAlignment="Top" Height="29" Width="30" FontWeight="Bold" FontSize="14" Click="Information_Click"/>
+
+
     </Grid>
 </Window>

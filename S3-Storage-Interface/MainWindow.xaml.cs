@@ -17,11 +17,9 @@ using S3_Storage_Interface.Storage;
 using System.IO;
 using System.Windows.Media.Animation;
 
+
 namespace S3_Storage_Interface
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -42,18 +40,26 @@ namespace S3_Storage_Interface
             openDialogFile.Filter = "All files (*.*)|*.*";
             openDialogFile.Multiselect = true;
 
+            List<string>filePaths = new List<string>();
+            List<string>fileNames = new List<string>();
+
+            string key = SET_KEY.Text + "/";
             if (openDialogFile.ShowDialog() == true)
             {
-                string[] filePaths = openDialogFile.FileNames;
-                string[] fileNames = filePaths.Select(path => System.IO.Path.GetFileName(path)).ToArray();
+                filePaths.AddRange(openDialogFile.FileNames);
 
-                List<string> Params = GetParams();
-
-                Client client = new Client(Params[3], Params[1], Params[2], Params[0]);
-                Upload addToBucket = new Upload(client);
-
-                bool response = addToBucket.AddFile(fileNames, filePaths);
+                if (key != null)
+                {
+                    fileNames.AddRange(filePaths.Select(path => (key + System.IO.Path.GetFileName(path))).ToList());
+                }
             }
+            
+            List<string> Params = GetParams();
+
+            Client client = new Client(Params[3], Params[1], Params[2], Params[0]);
+
+            Upload addToBucket = new Upload(client);
+            bool response = addToBucket.AddFile(fileNames, filePaths);
         }
         public List<string> GetParams()
         {
@@ -78,29 +84,6 @@ namespace S3_Storage_Interface
                 Params.Add(bucketName);
             }
             return Params;
-        }
-
-        private void Button_Refresh(object sender, RoutedEventArgs e)
-        {
-            ListAllObjs.Items.Clear();
-            List<string> Params = new List<string>();
-            
-            using(StreamReader sr = new StreamReader("params_s3.txt"))
-            {
-                while (!sr.EndOfStream)
-                {
-                    Params.Add(sr.ReadLine());
-                }
-            }
-            Client client = new Client(Params[3], Params[1], Params[2], Params[0]);
-            GetList getList = new GetList(client);
-
-            List<string> fileNames = getList.GetAllObjs();
-
-            foreach (string file in fileNames)
-            {
-                ListAllObjs.Items.Add(file);
-            }
         }
 
         private void Delete_Obj_Click(object sender, RoutedEventArgs e)
@@ -142,6 +125,42 @@ namespace S3_Storage_Interface
             {
                 Directory.CreateDirectory(newFolderPath);
             }
+        }
+
+        private void Refresh_Click(object sender, RoutedEventArgs e)
+        {
+            ListAllObjs.Items.Clear();
+            List<string> Params = new List<string>();
+
+            using (StreamReader sr = new StreamReader("params_s3.txt"))
+            {
+                while (!sr.EndOfStream)
+                {
+                    Params.Add(sr.ReadLine());
+                }
+            }
+            Client client = new Client(Params[3], Params[1], Params[2], Params[0]);
+            GetList getList = new GetList(client);
+
+            List<string> fileNames = getList.GetAllObjs();
+            fileNames.Sort();
+
+            foreach (string file in fileNames)
+            {
+                ListAllObjs.Items.Add(file);
+            }
+        }
+        private void SET_KEY_Text_Changed(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Information_Click(object sender, RoutedEventArgs e)
+        {
+            string info = "Before uploading, you may enter a path in your bucket\nwhere files'l be saved" +
+                "\n\nWhen you donwload files, they'l be saved in documents\n" +
+                "s3_bucket_files directory";
+            System.Windows.MessageBox.Show(info, "Information");
         }
     }
 }
