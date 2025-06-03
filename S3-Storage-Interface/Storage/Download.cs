@@ -23,17 +23,13 @@ namespace S3_Storage_Interface.Storage
                 Key = Key
             };
 
-            // Получаем путь к папке "Документы"
             string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-            // Создаем полный путь к файлу, который будет загружен
-            string filePath = Path.Combine(documentsPath, "s3_bucket_files"); // Используйте Key как имя файла
+            string filePath = Path.Combine(documentsPath, "s3_bucket_files");
             filePath = Path.Combine(filePath, Key);
 
-            // Извлекаем директорию из ключа
             string directoryPath = Path.GetDirectoryName(filePath);
 
-            // Создаем папку, если она не существует
             if (!Directory.Exists(directoryPath))
             {
                 Directory.CreateDirectory(directoryPath);
@@ -46,19 +42,19 @@ namespace S3_Storage_Interface.Storage
                 {
                     response.ResponseStream.CopyTo(fileStream);
                 }
-                MessageBox.Show($"Файл успешно загружен в: {filePath}", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show($"File is downloaded in: {filePath}", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             catch (AmazonS3Exception e)
             {
-                MessageBox.Show($"Ошибка на сервере. Сообщение: '{e.Message}' при загрузке объекта", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Internal server error. Message: '{e.Message}' during uploading", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             catch (UnauthorizedAccessException e)
             {
-                MessageBox.Show($"Доступ запрещен. Сообщение: '{e.Message}'", "Ошибка доступа", MessageBoxButton.OK);
+                MessageBox.Show($"Access is denied. Message: '{e.Message}'", "Access error", MessageBoxButton.OK);
             }
             catch (Exception e)
             {
-                MessageBox.Show($"Неизвестная ошибка. Сообщение: '{e.Message}'", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Unknown error. Message: '{e.Message}'", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }
